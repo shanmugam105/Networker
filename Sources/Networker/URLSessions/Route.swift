@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RouteProtocol {
+public protocol RouteProtocol {
     var urlPath: String { get }
     var path: String { get }
     var header: [String: String]? { get }

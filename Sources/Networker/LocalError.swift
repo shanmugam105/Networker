@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum LocalError: LocalizedError {
+public enum LocalError: LocalizedError {
     case unknownError(_ message: String?)
     // Input Error
     case phoneCantBeEmpty
@@ -36,7 +36,7 @@ enum LocalError: LocalizedError {
 }
 
 extension LocalError: Equatable {
-    static func == (lhs: LocalError, rhs: LocalError) -> Bool {
+    public static func == (lhs: LocalError, rhs: LocalError) -> Bool {
         lhs.localizedDescription == rhs.localizedDescription
     }
 }

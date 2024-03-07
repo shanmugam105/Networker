@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Network_Package_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-ts-WZE">
+                                <rect key="frame" x="149" y="428.66666666666669" width="95" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Generate"/>
+                                <connections>
+                                    <action selector="generateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIP-lf-RXM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8U-ka-DcS">
+                                <rect key="frame" x="146.66666666666666" y="389.66666666666669" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hLZ-0U-VbS"/>
+                                    <constraint firstAttribute="height" constant="35" id="yYi-XV-A5Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AWb-Sx-Fhh">
+                                <rect key="frame" x="186.66666666666666" y="436" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1jt-mb-Jmc"/>
+                                    <constraint firstAttribute="width" constant="20" id="tM6-HT-qbl"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V8R-ts-WZE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="80A-hH-QsP"/>
+                            <constraint firstItem="V8R-ts-WZE" firstAttribute="top" secondItem="B8U-ka-DcS" secondAttribute="bottom" constant="4" id="9yR-vw-JOK"/>
+                            <constraint firstItem="V8R-ts-WZE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XzE-sJ-Xpo"/>
+                            <constraint firstItem="B8U-ka-DcS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLz-rN-X8F"/>
+                            <constraint firstItem="AWb-Sx-Fhh" firstAttribute="centerX" secondItem="V8R-ts-WZE" secondAttribute="centerX" id="rvW-dQ-tt3"/>
+                            <constraint firstItem="AWb-Sx-Fhh" firstAttribute="centerY" secondItem="V8R-ts-WZE" secondAttribute="centerY" id="wpi-Yg-LiB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="AWb-Sx-Fhh" id="c20-B2-ibu"/>
+                        <outlet property="generateButton" destination="V8R-ts-WZE" id="gWt-ap-DeJ"/>
+                        <outlet property="textField" destination="B8U-ka-DcS" id="QqL-Du-Oc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
